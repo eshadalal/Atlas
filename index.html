@@ -103,7 +103,6 @@
 <body>
     <div id="map-container">
         <img id="map-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Canada_provinces_blank.png/889px-Canada_provinces_blank.png" alt="Map of Canada">
-        <!-- Clickable areas adjusted -->
         <div class="state" id="Ontario" style="top: 65%; left: 45%; width: 16%; height: 22%;" data-name="Ontario"></div>
         <div class="state" id="Quebec" style="top: 50%; left: 60%; width: 22%; height: 30%;" data-name="Quebec"></div>
         <div class="state" id="British Columbia" style="top: 48%; left: -5%; width: 20%; height: 30%;" data-name="British Columbia"></div>
@@ -120,10 +119,8 @@
         <div class="state" id="Nunavut" style="top: 20%; left: 35%; width: 28%; height: 28%;" data-name="Nunavut"></div>
     </div>
 
-    <!-- Tooltip container -->
     <div id="tooltip"></div>
 
-    <!-- Chatbot Modal -->
     <div id="chatbot-modal">
         <div id="chatbot-header">Atlas</div>
         <div id="chatbot-content"></div>
@@ -156,7 +153,7 @@
             });
 
             element.addEventListener('click', function() {
-                chatbotModal.style.display = 'flex'; // Show the modal
+                chatbotModal.style.display = 'flex'; 
                 const provinceName = this.getAttribute('data-name');
                 chatbotContent.innerHTML = `<p>You've selected ${provinceName}. What would you like to learn about ${provinceName}?</p>`;
             });
